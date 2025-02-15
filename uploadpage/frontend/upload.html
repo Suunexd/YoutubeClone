@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload page</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+
+    <nav class="navbar">
+         <a id="home" href="">HOME</a> 
+         <div id="poza" onclick="loadAccountPage()">
+         </div>
+         <div id="accountsettings" style="width:100%; height:100%; display:none;">
+            <iframe src="account.html" width="200px" height="300px"></iframe>
+          </div>
+         <div id="logo"></div>
+
+         <form>
+            <div class="search">
+                <input class="search-input" type="search" placeholder="Search">
+            </div>
+        </form>
+    </nav>
+
+    <div class="dashboard">
+        <div id="Poza">
+        </div>
+        <div id="date">
+            <span id="username">Dydg</span>
+            <br>
+            <span id="email">smth@gmail.com </span>
+        </div>
+    </div>
+
+    <div class="videos">
+        <b>Channel Videos</b>
+
+        <div id="btn_upload" onclick="loadUploadPage()">
+            <div id="Uploadtxt">UPLOAD</div>
+        </div>
+
+        <div id="uploadframe" style="width:100%; height:100%; display:none;">
+            <iframe src="videodetails.html" width="800px" height="400px"></iframe>
+        </div>
+
+        <div id="detailsframe" style="width:100%; height:100%; display:none;">
+            <iframe src="videodetails.html" width="400px" height="450px"></iframe>
+        </div>
+
+        <div class="container" id="videoContainer">
+            <!-- Videoclipurile vor fi adăugate dinamic aici -->
+        </div>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* VideoPlayer.css */
+.video-player-container {
+    width: 100%;
+    max-width: 800px; /* Restrict max width */
+    margin: 20px auto;
+    background-color: #202124;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-player {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000; /* Make background black for better visibility */
+  }
+  
+  .video-title {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  video::-webkit-media-controls-panel {
+  /*  background-color: #383838; /* Change the background color of the controls */
+  }
+  
+  video::-webkit-media-controls-play-button,
+  video::-webkit-media-controls-pause-button {
+    background-color: transparent; /* Make the background transparent */
+    border-radius: 50%; /* Ensure circular shape */
+    margin-bottom: 6px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  video::-webkit-media-controls-pause-button:hover {
+    background-color: #202124; /* Change background color on hover */
+  }
+  
+  video::-webkit-media-controls-timeline {
+    background-color: #202124; /* Change the progress bar color */
+  }
+  
+  video::-webkit-media-controls-current-time-display,
+  video::-webkit-media-controls-time-remaining-display {
+    color: #fff; /* Change text color for the time display */
+  }
+  

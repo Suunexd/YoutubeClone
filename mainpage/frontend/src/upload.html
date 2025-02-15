@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Videoclip</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Încarcă un videoclip</h1>
+
+        <!-- Formularul de încărcare a videoclipului -->
+        <form id="uploadForm">
+            <label for="Title">Titlu:</label>
+            <input type="text" id="Title" required><br>
+
+            <label for="Description">Descriere:</label>
+            <textarea id="Description" required></textarea><br>
+
+            <label for="Visibility">Vizibilitate:</label>
+            <select id="Visibility" required>
+                <option value="public">Public</option>
+                <option value="private">Privat</option>
+            </select><br>
+
+            <label for="videoFile">Fișier video:</label>
+            <input type="file" id="videoFile" accept="video/*" required><br>
+
+            <label for="thumbnailFile">Fișier thumbnail:</label>
+            <input type="file" id="thumbnailFile" accept="image/*" required><br>
+
+            <button type="submit">Încarcă</button>
+        </form>
+
+        <!-- Indicatorul de încărcare -->
+        <div id="loading" style="display:none;">Încărcare...</div>
+
+        <!-- Secțiunea pentru a vizualiza videoclipurile încărcate -->
+        <h2>Videoclipuri încărcate</h2>
+        <div id="videoContainer"></div>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+</html>

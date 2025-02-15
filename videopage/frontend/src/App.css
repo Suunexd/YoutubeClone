@@ -1,0 +1,205 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto; /* Enable scrolling for the entire page */
+  background-color: #202124 ;
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: row; /* Align children side by side */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #202124;
+  overflow: hidden; /* Prevent overflow on the body */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  height: 100px; /* Header height */
+  background-color: #202124;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #343538; /* Optional separator line */
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 100; /* Ensure header stays on top */
+}
+
+/* Logo and Text */
+.logo {
+  height: 90px; /* Adjust the logo size */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0; /* Ensure logo and title are close together */
+}
+#poza {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  background-image: url("../public/eu.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden; 
+  top: 100px;
+  margin-left: 84%;
+ 
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  justify-content: space-between;  /* Ensures space between header and thumbnails */
+  padding: 20px;
+  height: auto;  /* Allow the content to grow with the page */
+  background-color: #202124;
+  margin-top: 100px; /* Add margin to push content below the header */
+  flex-grow: 1;  /* Allow the content to take up remaining space */
+  overflow-y: auto; /* Enable page-wide scrolling */
+}
+
+/* Thumbnails Column */
+.video-thumbnails {
+  position: relative;
+  width: 200px; /* Adjust the width of the column */
+  background-color: #202124;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  margin-left: auto; /* Position it to the right of the page */
+}
+
+/* Video Card Styles */
+.video-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.thumbnail {
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Optional: Add a hover effect to scale the thumbnail */
+.thumbnail:hover {
+  transform: scale(1.05); /* Slightly enlarge the thumbnail when hovered */
+}
+
+.video-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.video-player-container {
+  display: flex;
+  flex-direction: column; /* Stack video and title vertically */
+  align-items: flex-start; /* Align content to the left */
+  margin-left: 250px; /* Adjust the position of the container */
+  margin-top: 250px; /* Adjust the top position */
+}
+
+.video-player-title {
+  color: white; /* Set title color to white */
+  font-size: 18px; /* Adjust font size as needed */
+  margin-top: 8px; /* Add spacing between the video and title */
+  left: 10%;
+}
+.like {
+  background-color: transparent;
+  width: 10px;
+  margin-left: 3%;
+  height: 10px; /* Add height if it's not already defined */
+  border-radius: 50%; /* If you want it to be circular */
+  position: absolute; /* Position it relative to its parent container */
+  left: 0; /* Align it to the left edge */
+  top: 50%; /* Position it vertically centered */
+  transform: translateY(-50%); /* Ensure it's centered vertically */
+  cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+}
+
+/* Optional Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-thumbnails {
+    position: relative;
+    width: 100%;  /* Ensure the thumbnails take up full width on small screens */
+    top: 0;
+    right: 0; /* Reset right positioning */
+    margin-left: 0;
+  }
+}
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: #202124; /* Match the background color of the page */
+ /* border-radius: 10px;  Rounded corners */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #343538; /* The color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #202124; /* Add border to separate thumb from track */
+}
+
+/* Style the scrollbar thumb when hovering */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #595b5e; /* Lighter color when hovered */
+}
+
+/* Style the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #202124;
+}
+.video-thumbnails::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.video-thumbnails::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the scrollbar thumb color */
+  border-radius: 10px; /* Make the scrollbar thumb rounder */
+}
+
+.video-thumbnails::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker shade on hover */
+}
+
+.video-thumbnails::-webkit-scrollbar-track {
+  background: #333; /* Set the track (background) color */
+}

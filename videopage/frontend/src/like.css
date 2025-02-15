@@ -1,0 +1,31 @@
+.like-button, .dislike-button {
+    width: 50px; /* Set a fixed width for the button */
+    height: 50px; /* Set a fixed height to make it a perfect circle */
+    margin: 5px;
+    font-size: 16px;
+    margin-left: 4%;
+    cursor: pointer;
+    background-color: #202124;
+    border-radius: 50%; /* Perfectly round circle */
+    display: flex; /* Center align text/icon */
+    align-items: center;
+    justify-content: center;
+    box-shadow: none; /* No shadow */
+    border: none; /* No border */
+    color: white; /* Button text color */
+   
+  }
+  
+  .like-button.active, .dislike-button.active {
+    background-color:  #373940;
+    color:  #202124;
+  }
+  
+  .like-button:hover, .dislike-button:hover {
+    opacity: 0.8;
+  }
+  .video-actions
+  {
+    width: 50px;
+  }
+  

@@ -1,0 +1,299 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #202124;
+  color: #fff;
+}
+
+.youtube-page {
+  display: flex;
+  flex-direction: row; /* Default: sidebar + content */
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.sidebar-container {
+  align-items: flex-start;
+  background-color: #202124;
+  border-right: 2px solid #444;
+  padding: 1.15rem 1.15rem 1.15rem 1.15rem;
+}
+
+.sidebar-container.open {
+  transform: translateX(0);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Sidebar styles */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 12px 10px;
+  margin: 5px 0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #343538;
+}
+
+/* Main content styles */
+.content {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.channel-info {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Pentru aliniere pe ecrane mici */
+  padding: 1.15rem 1.15rem 1.15rem 1.15rem;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  background-color: #ea80fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin-right: 20px;
+}
+
+.channel-details h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.channel-details p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adaugă spațiu între butoane */
+}
+
+.buttons button {
+  padding: 8px 12px;
+  background-color: #303030;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #505050;
+}
+
+/* Videos section styles */
+.videos {
+  margin-top: 20px;
+  border-top: 2px solid #444;
+  padding-left: 0;
+  padding: 1.15rem 1.15rem 1.15rem 1.15rem;
+}
+
+.videos h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.video-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-thumbnail {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.video-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.video-info p {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+
+/* Burger button styles */
+.burger-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 100%;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-button.open .burger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-button.open .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-button.open .burger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .youtube-page {
+    flex-direction: column; /* Sidebar sus, content jos */
+  }
+
+  .sidebar-container {
+    flex: 0 0 auto;
+    height: auto; /* Sidebar-ul se extinde automat */
+    display: flex;
+    justify-content: center; /* Logo-ul este centrat */
+    padding: 10px;
+    border-bottom: 2px solid #444;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .channel-info {
+    flex-direction: column; /* Stivuit pe ecrane mici */
+    align-items: center;
+  }
+
+  .profile-pic {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .channel-details h2 {
+    font-size: 1rem;
+    text-align: center; /* Aliniere pe mijloc */
+  }
+
+  .channel-details p {
+    text-align: center; /* Aliniere pe mijloc */
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .video-card {
+    flex-direction: column; /* Imaginile și textul sunt stivuite */
+    align-items: center;
+    text-align: center;
+  }
+
+  .video-thumbnail {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%; /* Se ajustează pe lățimea ecranului */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none; /* Ascunde textul logo-ului pentru spațiu */
+  }
+
+  .menu-item {
+    font-size: 0.8rem; /* Text mai mic în sidebar */
+  }
+
+  .channel-details h2 {
+    font-size: 0.9rem;
+  }
+
+  .channel-details p {
+    font-size: 0.8rem;
+  }
+
+  .buttons button {
+    font-size: 0.8rem; /* Butoane mai mici */
+    padding: 6px 10px;
+  }
+
+  .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-show {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) {
+  .burger-bar {
+    display: none;
+  }
+
+  .sidebar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

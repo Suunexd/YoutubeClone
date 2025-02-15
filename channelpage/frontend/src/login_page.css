@@ -1,0 +1,147 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #202124;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-card {
+  background-color: #202124;
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  padding: 20px; /* Adăugăm padding pentru a da spațiu în jurul cardului */
+  border-radius: 8px; /* Rounding edges for a smoother look */
+}
+
+.logo {
+  width: auto;
+  height: 80px;
+  max-width: 100%;
+  margin: 0 auto 0; /* Centrăm logo-ul în card cu margin auto și lăsăm distanță sub el */
+  display: center; /* Asigură-te că logo-ul este centrat */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px; /* Distanta uniformă între titlu și restul formularelor */
+  color: white;
+}
+
+p {
+  color: #ea80fc;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 10px; /* Mică ajustare a distanței */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px; /* Același spațiu între câmpuri de input */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.link-button {
+  background: none;
+  color: #ea80fc;
+  border: none;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 1rem 1rem 1rem 1rem;
+
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.login-button,
+.register-button {
+  background-color: #ea80fc;
+  color: black;
+  border: black;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: #ea80fc;
+}
+
+.help-text {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+a {
+  color: #ea80fc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 70px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
+
+  .login-button,
+  .register-button {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.8rem;
+  }
+}
